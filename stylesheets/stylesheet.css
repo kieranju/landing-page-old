@@ -12,6 +12,14 @@
 	box-sizing: border-box;
 }
 
+/*  -+=+-  -+=+-  -+=+-  DROP DOWN  -+=+-  -+=+-  -+=+-  */
+
+#htmldrop ul, #jsdrop ul {
+    position: absolute;
+    left: -333px;
+    opacity: 0;
+}
+
 /*  -+=+-  -+=+-  -+=+-  MAIN STYLES  -+=+-  -+=+-  -+=+-  */
 
 body { background-color: #F2F2F2; margin: 0px; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif; }
@@ -47,11 +55,11 @@ section h2 {
     -webkit-transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
     -o-transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
     transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
-    position: relative;
     font-family: "Oswald", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
     font-size: 18px;
     font-weight: 100;
     text-transform: uppercase;
+    position: relative;
     height: 27px;
     width: 221px;
     margin: 0;
@@ -65,29 +73,26 @@ section h2 {
 }
 
 section h2:hover {
-    -moz-transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
-    -webkit-transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
-    -o-transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
-    transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
-    top: -1px;
+    -moz-transition: box-shadow 0.05s, top 0.16s, color 0.2s, border-bottom 0.22s, border-top 0.05s, background-color 0.22s;
+    -webkit-transition: box-shadow 0.05s, top 0.16s, color 0.2s, border-bottom 0.22s, border-top 0.05s, background-color 0.22s;
+    -o-transition: box-shadow 0.05s, top 0.16s, color 0.2s, border-bottom 0.22s, border-top 0.05s, background-color 0.22s;
+    transition: box-shadow 0.05s, top 0.16s, color 0.2s, border-bottom 0.22s, border-top 0.05s, background-color 0.22s;
     color: white;
     border-top: 1px solid rgba(255,255,255,0.1);
     border-bottom: 1px solid rgba(0,0,0,0.3);
-    box-shadow: 0px -1px rgba(0,0,0,0.2), 0px 1px rgba(0,0,0,0.3);
+    box-shadow: 0px -1px rgba(0,0,0,0.2);
     background-color: rgba(255,255,255,0.04);
 }
 
 section h2:active {
-    -moz-transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
-    -webkit-transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
-    -o-transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
-    transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
-    top: 0px;
+    -moz-transition: box-shadow 0.04s, top 0.02s, color 0.075s, border-top 0.04s, background-color 0.04s;
+    -webkit-transition: box-shadow 0.04s, top 0.02s, color 0.075s, border-top 0.04s, background-color 0.04s;
+    -o-transition: box-shadow 0.04s, top 0.02s, color 0.075s, border-top 0.04s, background-color 0.04s;
+    transition: box-shadow 0.04s, top 0.02s, color 0.075s, border-top 0.04s, background-color 0.04s;
     color: #CCCCCC;
     border-top: 1px solid rgba(0,0,0,0.25);
-    border-bottom: 1px solid rgba(0,0,0,0.3);
     box-shadow: 0px -1px rgba(255,255,255,0.05);
-    background-color: rgba(0,0,0,0.01);
+    background-color: rgba(0,0,0,0.02);
     text-shadow: 0px -1px #0F0F0F;
 }
 
@@ -144,4 +149,14 @@ section a:active {
     box-shadow: 0px -1px rgba(255,255,255,0.05);
     background-color: rgba(0,0,0,0.01);
     text-shadow: 0px -1px #0F0F0F;
+}
+
+section a:after {
+    content: "•――";
+    color: #2B2B2B;
+    letter-spacing: -0.5em;
+    font-size: 13px;
+    text-shadow: 0px 1px #6E6E6E;
+    float: right;
+    margin: 1px 6px 0 0;
 }

@@ -1,6 +1,5 @@
 $(document).ready(function() {
     dropSequence = false;
-    dropActive = null;
     
     htmldrop = $("#htmldrop");
     jsdrop = $("#jsdrop");

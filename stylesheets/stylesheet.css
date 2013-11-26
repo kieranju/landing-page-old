@@ -1,8 +1,4 @@
-/*
-- - - - - - - - - - - - - - - - - - - - - -
-PRE : TWEAKS
-- - - - - - - - - - - - - - - - - - - - - -
-*/
+/*  -+=+-  -+=+-  -+=+-  TWEAKS  -+=+-  -+=+-  -+=+-  */
 
 ::selection { display: none; }
 ::-moz-selection { display: none; }
@@ -16,11 +12,7 @@ PRE : TWEAKS
 	box-sizing: border-box;
 }
 
-/*
-- - - - - - - - - - - - - - - - - - - - - -
-FORM : STYLES
-- - - - - - - - - - - - - - - - - - - - - -
-*/
+/*  -+=+-  -+=+-  -+=+-  FORM STYLES  -+=+-  -+=+-  -+=+-  */
 
 ul {
     list-style: none;
@@ -28,20 +20,11 @@ ul {
     margin: 0;
 }
 
-li {
-    
-}
-
-/*
-- - - - - - - - - - - - - - - - - - - - - -
-MAIN : CONTENT      
-- - - - - - - - - - - - - - - - - - - - - -
-*/
+/*  -+=+-  -+=+-  -+=+-  MAIN STYLES  -+=+-  -+=+-  -+=+-  */
 
 body { background-color: #F2F2F2; margin: 0px; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif; }
 a, a:hover, a:visited, a:active { text-decoration: none; color: #F2F2F2; }
 hr { border: 0; width: 190px; height: 2px; margin: 0 auto 25px; background: rgba(0,0,0,0.3); border-bottom: 1px solid rgba(255,255,255,0.25); }
-
 
 header {
     cursor: crosshair;
@@ -56,7 +39,7 @@ header {
 
 section h2:after {
     font-family: Courier;
-    content:"+";
+    content: "+";
     float: right;
     margin: 3px 10px 0 0;
 }
@@ -74,7 +57,9 @@ section {
 }
 
 section h2 {
-    
+    -moz-transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
+    -webkit-transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
+    -o-transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
     transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
     position: relative;
     font-family: "Oswald", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
@@ -105,7 +90,9 @@ section h2:hover {
 }
 
 section h2:active {
-    
+    -moz-transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
+    -webkit-transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
+    -o-transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
     transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
     top: 0px;
     color: #CCCCCC;
@@ -117,10 +104,6 @@ section h2:active {
 }
 
 section a {
-    -moz-transition: color 0.4s 0.2s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
-    -webkit-transition: color 0.4s 0.2s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
-    -o-transition: color 0.4s 0.2s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
-    transition: color 0.4s 0.2s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
     position: relative;
     height: 27px;
     width: 221px;

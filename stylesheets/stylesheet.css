@@ -12,19 +12,12 @@
 	box-sizing: border-box;
 }
 
-/*  -+=+-  -+=+-  -+=+-  FORM STYLES  -+=+-  -+=+-  -+=+-  */
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
 /*  -+=+-  -+=+-  -+=+-  MAIN STYLES  -+=+-  -+=+-  -+=+-  */
 
 body { background-color: #F2F2F2; margin: 0px; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif; }
-a, a:hover, a:visited, a:active { text-decoration: none; color: #F2F2F2; }
 hr { border: 0; width: 190px; height: 2px; margin: 0 auto 25px; background: rgba(0,0,0,0.3); border-bottom: 1px solid rgba(255,255,255,0.25); }
+a, a:hover, a:visited, a:active { text-decoration: none; color: #F2F2F2; }
+ul { list-style: none; padding: 0; margin: 0; }
 
 header {
     cursor: crosshair;
@@ -35,13 +28,6 @@ header {
     background-image: url(../images/side_bg.png);
     border-right: 1px solid #5C6263;
     box-shadow: 3px 0px #383C3D, 4px 0px #323536, 5px 0px #313436;
-}
-
-section h2:after {
-    font-family: Courier;
-    content: "+";
-    float: right;
-    margin: 3px 10px 0 0;
 }
 
 section {
@@ -79,13 +65,15 @@ section h2 {
 }
 
 section h2:hover {
-    
+    -moz-transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
+    -webkit-transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
+    -o-transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
     transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
-    top: -2px;
+    top: -1px;
     color: white;
     border-top: 1px solid rgba(255,255,255,0.1);
     border-bottom: 1px solid rgba(0,0,0,0.3);
-    box-shadow: 0px -1px rgba(0,0,0,0.2), 0px 2px rgba(0,0,0,0.3);
+    box-shadow: 0px -1px rgba(0,0,0,0.2), 0px 1px rgba(0,0,0,0.3);
     background-color: rgba(255,255,255,0.04);
 }
 
@@ -103,14 +91,57 @@ section h2:active {
     text-shadow: 0px -1px #0F0F0F;
 }
 
+section h2:after {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    content: "+";
+    float: right;
+    margin: 3px 10px 0 0;
+}
+
 section a {
+    -moz-transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
+    -webkit-transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
+    -o-transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
+    transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
     position: relative;
-    height: 27px;
+    display: block;
+    height: 26px;
     width: 221px;
+    padding-top: 3px;
     color: #E3E3E3;
     border-top: 1px solid rgba(255,255,255,0.0);
     border-bottom: 1px solid rgba(0,0,0,0.0);
     box-shadow: 0px -1px rgba(0,0,0,0.0), 0px 1px rgba(255,255,255,0.0);
     background-color: rgba(255,255,255,0.0);
     text-shadow: 0px 1px #0F0F0F;
+}
+
+section a:hover {
+    -moz-transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
+    -webkit-transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
+    -o-transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
+    transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
+    top: -2px;
+    color: white;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    box-shadow: 0px -1px rgba(0,0,0,0.2), 0px 2px rgba(0,0,0,0.3);
+    background-color: rgba(255,255,255,0.04);
+}
+
+section a:active {
+    -moz-transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
+    -webkit-transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
+    -o-transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
+    transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
+    top: 0px;
+    color: #CCCCCC;
+    border-top: 1px solid rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    box-shadow: 0px -1px rgba(255,255,255,0.05);
+    background-color: rgba(0,0,0,0.01);
+    text-shadow: 0px -1px #0F0F0F;
 }

@@ -1,4 +1,5 @@
 var dropSequence = false;
+var branchSelected = false;
 
 var htmldrop = $("#htmldrop");
 var jsdrop = $("#jsdrop");
@@ -54,14 +55,35 @@ $(document).ready(function() {
         }
     }
     
+    $("#sidebar").find("a").click(function() {
+        if (branchSelected == false)
+        {
+            $(this).toggleClass("selected");
+            branchSelected = true;
+            branchObj = $(this);
+        }
+        else
+        {
+            if ($(this).hasClass("selected"))
+            {
+                $(this).toggleClass("selected");
+                delete branchObj;
+                branchSelected = false;
+            }
+            else
+            {
+                branchObj.toggleClass("selected");
+                $(this).toggleClass("selected");
+                branchObj = $(this);
+            }
+        }
+    });
+    
     htmldrop.click(function() {
         dropDown(htmldrop);
     });
     htmldrop.children("ul").click(function(e) {
         e.stopPropagation();
-    });
-    htmldrop.find("a").click(function() {
-        $(this).toggleClass("selected");
     });
     
     jsdrop.click(function() {

@@ -16,6 +16,10 @@ $(document).ready(function() {
             {
                 dropArray[i].children("h2").toggleClass("off");
             }
+            else
+            {
+                dropArray[i].find("a").addClass("notch");
+            }
         }
     }
     
@@ -53,21 +57,39 @@ $(document).ready(function() {
     htmldrop.click(function() {
         dropDown(htmldrop);
     });
+    htmldrop.children("ul").click(function(e) {
+        e.stopPropagation();
+    });
+    htmldrop.find("a").click(function() {
+        $(this).toggleClass("selected");
+    });
     
     jsdrop.click(function() {
         dropDown(jsdrop);
+    });
+    jsdrop.children("ul").click(function(e) {
+        e.stopPropagation();
     });
     
     phpdrop.click(function() {
         dropDown(phpdrop);
     });
+    phpdrop.children("ul").click(function(e) {
+        e.stopPropagation();
+    });
     
     wpdrop.click(function() {
         dropDown(wpdrop);
     });
+    wpdrop.children("ul").click(function(e) {
+        e.stopPropagation();
+    });
 
     clientdrop.click(function() {
         dropDown(clientdrop);
+    });
+    clientdrop.children("ul").click(function(e) {
+        e.stopPropagation();
     });
     
     dropHas();

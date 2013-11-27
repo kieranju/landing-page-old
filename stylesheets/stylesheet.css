@@ -1,7 +1,7 @@
 /*  -+=+-  -+=+-  -+=+-  TWEAKS  -+=+-  -+=+-  -+=+-  */
 
-::selection { display: none; }
 ::-moz-selection { display: none; }
+::selection { display: none; }
 
 ::-ms-reveal { display: none; }
 ::-ms-clear { display: none; }
@@ -20,11 +20,11 @@ a, a:hover, a:visited, a:active { text-decoration: none; color: #E3E3E3; }
 ul { list-style: none; padding: 0; margin: 0; }
 
 main {
-    margin-left: 265px;
-    margin-top: -185px;
+    margin-left: 235px;
 }
 
 h1 {
+    margin: 0;
     font-size: 24px;
     font-weight: 100;
 }
@@ -44,6 +44,7 @@ header {
     box-sizing: content-box;
     text-align: center;
     width: 220px;
+    position: fixed;
     background-color: #535a5c;
     background-image: url(../images/side_bg.png);
     border-right: 1px solid #5C6263;
@@ -52,9 +53,10 @@ header {
 
 section {
     box-sizing: content-box;
-    height: calc(100% - 200px);
+    height: 100%;
     position: fixed;
     width: 220px;
+    margin-top: 200px;
     text-indent: 14px;
     background-color: #535a5c;
     background-image: url(../images/side_bg.png);
@@ -120,16 +122,16 @@ section h2:active {
 }
 
 #htmldrop h2.off:after, #jsdrop h2.off:after, #phpdrop h2.off:after, #wpdrop h2.off:after, #clientdrop h2.off:after {
-    content: "⋯";
+    content: "…";
     color: darkgray;
-    margin: 2px 9px 0 0;
+    margin: -2px 10px 0 0;
 }
 
 section a {
-    -moz-transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
-    -webkit-transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
-    -o-transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
-    transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s, width 0.2s;
+    -moz-transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s;
+    -webkit-transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s;
+    -o-transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s;
+    transition: color 0.4s 0.1s, box-shadow 0.2s, border-bottom 0.3s 0.1s, border-top 0.3s 0.1s, background-color 0.3s 0.1s, top 0.2s;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 14px;
     text-transform: uppercase;
@@ -139,6 +141,8 @@ section a {
     width: 221px;
     padding-top: 3px;
     color: #E3E3E3;
+    top: 0px;
+    cursor: default;
     border-top: 1px solid rgba(255,255,255,0.0);
     border-bottom: 1px solid rgba(0,0,0,0.0);
     box-shadow: 0px -1px rgba(0,0,0,0.0), 0px 1px rgba(255,255,255,0.0);
@@ -146,24 +150,24 @@ section a {
     text-shadow: 0px 1px #0F0F0F;
 }
 
-section a:hover {
-    -moz-transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
-    -webkit-transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
-    -o-transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
-    transition: box-shadow 0.16s 0.075s, top 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s;
+section a:hover{
+    -moz-transition: background-color 0.2s, box-shadow 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s, top 0.16s 0.075s;
+    -webkit-transition: background-color 0.2s, box-shadow 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s, top 0.16s 0.075s;
+    -o-transition: background-color 0.2s, box-shadow 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s, top 0.16s 0.075s;
+    transition: background-color 0.2s, box-shadow 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s, top 0.16s 0.075s;
     top: -2px;
     color: white;
     border-top: 1px solid rgba(255,255,255,0.1);
     border-bottom: 1px solid rgba(0,0,0,0.3);
     box-shadow: 0px -1px rgba(0,0,0,0.2), 0px 2px rgba(0,0,0,0.3);
-    background-color: rgba(255,255,255,0.04);
+    background-color: #5F6669;
 }
 
 section a:active {
-    -moz-transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
-    -webkit-transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
-    -o-transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
-    transition: box-shadow 0.04s, top 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s;
+    -moz-transition: box-shadow 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s, top 0.04s;
+    -webkit-transition: box-shadow 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s, top 0.04s;
+    -o-transition: box-shadow 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s, top 0.04s;
+    transition: box-shadow 0.04s, color 0.075s, border-top 0.04s, background-color 0.04s, top 0.04s;
     top: 0px;
     color: #CCCCCC;
     border-top: 1px solid rgba(0,0,0,0.25);
@@ -173,7 +177,11 @@ section a:active {
     text-shadow: 0px -1px #0F0F0F;
 }
 
-section a:after {
+section a.notch:after {
+    -moz-transition: color 0.3s;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
     content: "•――";
     color: #2B2B2B;
     letter-spacing: -0.5em;
@@ -181,4 +189,29 @@ section a:after {
     text-shadow: 0px 1px #6E6E6E;
     float: right;
     margin: 1px 6px 0 0;
+}
+
+section a.selected {
+    color: white;
+    background-color: rgba(255,255,255,0.04);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    box-shadow: 0px -1px rgba(0,0,0,0.2);
+}
+
+section a.selected:hover {
+    top: 0px;
+}
+
+section a.selected:after {
+    color: #81E3E3;
+    text-shadow: 0px -1px #2E2E2E, 0px 1px #44857A, 0px 0px 6px rgba(255,255,255,0.3);
+}
+
+#sidebar {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }

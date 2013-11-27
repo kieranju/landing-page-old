@@ -12,6 +12,23 @@
 	box-sizing: border-box;
 }
 
+/*  -+=+-  -+=+-  -+=+-  MAIN STYLES  -+=+-  -+=+-  -+=+-  */
+
+body { background-color: #F2F2F2; margin: 0px; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif; }
+hr { border: 0; width: 190px; height: 2px; margin: 0 auto 25px; background: rgba(0,0,0,0.3); border-bottom: 1px solid rgba(255,255,255,0.25); }
+a, a:hover, a:visited, a:active { text-decoration: none; color: #E3E3E3; }
+ul { list-style: none; padding: 0; margin: 0; }
+
+main {
+    margin-left: 265px;
+    margin-top: -185px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 100;
+}
+
 /*  -+=+-  -+=+-  -+=+-  DROP DOWN  -+=+-  -+=+-  -+=+-  */
 
 #htmldrop ul, #jsdrop ul {
@@ -20,12 +37,7 @@
     opacity: 0;
 }
 
-/*  -+=+-  -+=+-  -+=+-  MAIN STYLES  -+=+-  -+=+-  -+=+-  */
-
-body { background-color: #F2F2F2; margin: 0px; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif; }
-hr { border: 0; width: 190px; height: 2px; margin: 0 auto 25px; background: rgba(0,0,0,0.3); border-bottom: 1px solid rgba(255,255,255,0.25); }
-a, a:hover, a:visited, a:active { text-decoration: none; color: #E3E3E3; }
-ul { list-style: none; padding: 0; margin: 0; }
+/*  -+=+-  -+=+-  -+=+-  SIDEBAR STYLES  -+=+-  -+=+-  -+=+-  */
 
 header {
     cursor: crosshair;
@@ -96,11 +108,21 @@ section h2:active {
     text-shadow: 0px -1px #0F0F0F;
 }
 
-section h2:after {
+#htmldrop h2:after, #jsdrop h2:after, #phpdrop h2:after, #wpdrop h2:after, #clientdrop h2:after {
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     content: "+";
     float: right;
     margin: 3px 10px 0 0;
+}
+
+#htmldrop h2.toggle:after, #jsdrop h2.toggle:after, #phpdrop h2.toggle:after, #wpdrop h2.toggle:after, #clientdrop h2.toggle:after {
+    content: "-";
+}
+
+#htmldrop h2.off:after, #jsdrop h2.off:after, #phpdrop h2.off:after, #wpdrop h2.off:after, #clientdrop h2.off:after {
+    content: "⋯";
+    color: darkgray;
+    margin: 2px 9px 0 0;
 }
 
 section a {

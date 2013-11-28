@@ -56,28 +56,38 @@ $(document).ready(function() {
     }
     
     $("#sidebar").find("a").click(function() {
+        activeObj = $(this);
+        objLocation = ((activeObj.position().top) + 205).toString();
+        
         if (branchSelected == false)
         {
-            $(this).toggleClass("selected");
+            activeObj.toggleClass("selected");
             branchSelected = true;
-            branchObj = $(this);
+            branchObj = activeObj;
         }
         else
         {
-            if ($(this).hasClass("selected"))
+            if (activeObj.hasClass("selected"))
             {
-                $(this).toggleClass("selected");
+                activeObj.toggleClass("selected");
                 delete branchObj;
                 branchSelected = false;
             }
             else
             {
                 branchObj.toggleClass("selected");
-                $(this).toggleClass("selected");
-                branchObj = $(this);
+                activeObj.toggleClass("selected");
+                branchObj = activeObj;
             }
         }
+        
+        $("main").append("<hr id='lineGen_01' />");
+        $("#lineGen_01").css("top", objLocation + "px");
     });
+    
+    function pageRender(drop) {
+        
+    }
     
     htmldrop.click(function() {
         dropDown(htmldrop);

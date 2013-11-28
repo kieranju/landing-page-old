@@ -117,14 +117,17 @@ $(document).ready(function() {
                                 var lineGen_06 = $("#lineGen_06");
                                 lineGen_06.css({"top": "71px"});
                                 lineGen_06.animate({"width": "9px", "height": "9px", "opacity": "1"}, 150, "easeInOutBack", function() {
-
+                                    $("main").append("<div id='lineGen_07'></div>");
+                                    var lineGen_07 = $("#lineGen_07");
+                                    lineGen_07.css({"top": "75px"});
+                                    lineGen_07.animate({"height": "500px", "width": "600px", "opacity": "1"}, 250, "easeInOutCubic", function() {
+                                        animSequence = false;
+                                    });
                                 });
                             });
                         });
                     });
-                    
                 });
-                animSequence = false;
             });
         }
         else

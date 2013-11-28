@@ -14,7 +14,10 @@
 
 /*  -+=+-  -+=+-  -+=+-  MAIN STYLES  -+=+-  -+=+-  -+=+-  */
 
-body { background-color: #F2F2F2; margin: 0px; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif; }
+html {
+    
+}
+body { background-color: #F2F2F2; margin: 0; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif; }
 section hr { border: 0; width: 190px; height: 2px; margin: 0 auto 25px; background: rgba(0,0,0,0.3); border-bottom: 1px solid rgba(255,255,255,0.25); }
 a, a:hover, a:visited, a:active { text-decoration: none; color: #E3E3E3; }
 ul { list-style: none; padding: 0; margin: 0; }
@@ -46,7 +49,7 @@ h1 {
     border: 0;
     opacity: 0;
     background: #999999;
-    box-shadow: 0px 30px 2px #E8E8E8;
+    box-shadow: 15px 25px 2px #E8E8E8;
 }
 
 #lineGen_02 {
@@ -57,7 +60,7 @@ h1 {
     border-radius: 15px;
     opacity: 0;
     border: 2px solid #808080;
-    box-shadow: 0px 30px 2px #E8E8E8;
+    box-shadow: 15px 25px 2px #E8E8E8;
 }
 
 #lineGen_03 {
@@ -66,7 +69,7 @@ h1 {
     width: 1px;
     opacity: 0;
     background: #6E6E6E;
-    box-shadow: 0px 30px 2px #E8E8E8;
+    box-shadow: 15px 25px 2px #E8E8E8;
     z-index: 5;
 }
 
@@ -78,7 +81,7 @@ h1 {
     border-radius: 15px;
     opacity: 0;
     border: 2px solid #808080;
-    box-shadow: 0px 30px 2px #E8E8E8;
+    box-shadow: 15px 25px 2px #E8E8E8;
 }
 
 #lineGen_05 {
@@ -89,7 +92,7 @@ h1 {
     border: 0;
     opacity: 0;
     background: #999999;
-    box-shadow: 0px 30px 2px #E8E8E8;
+    box-shadow: 15px 25px 2px #E8E8E8;
 }
 
 #lineGen_06 {
@@ -100,7 +103,19 @@ h1 {
     border-radius: 15px;
     opacity: 0;
     border: 2px solid #808080;
-    box-shadow: 0px 30px 2px #E8E8E8;
+    z-index: 10;
+    background-color: #F2F2F2;
+    
+}
+
+#lineGen_07 {
+    position: relative;
+    left: 227px;
+    border-radius: 2px;
+    opacity: 0;
+    border: 1px solid #808080;
+    box-shadow: 15px 15px 4px #EDEDED;
+    background-color: #F7F7F7;
 }
 
 /*  -+=+-  -+=+-  -+=+-  SIDEBAR STYLES  -+=+-  -+=+-  -+=+-  */
@@ -115,6 +130,7 @@ header {
     background-image: url(../images/side_bg.png);
     border-right: 1px solid #5C6263;
     box-shadow: 3px 0px #383C3D, 4px 0px #323536, 5px 0px #313436;
+    z-index: 100;
 }
 
 section {
@@ -128,6 +144,7 @@ section {
     background-image: url(../images/side_bg.png);
     border-right: 1px solid #5C6263;
     box-shadow: 3px 0px #383C3D, 4px 0px #323536, 5px 0px #313436;
+    z-index: 100;
 }
 
 section h2 {

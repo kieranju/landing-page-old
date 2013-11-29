@@ -18,7 +18,7 @@
 
 /*  -+=+-  -+=+-  -+=+-  MAIN STYLES  -+=+-  -+=+-  -+=+-  */
 
-body { background-color: #F2F2F2; margin: 0; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif; }
+body { background-color: #F2F2F2; background-image: url(../images/main_bg.png); margin: 0; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif; }
 section hr { border: 0; width: 190px; height: 2px; margin: 0 auto 25px; background: rgba(0,0,0,0.3); border-bottom: 1px solid rgba(255,255,255,0.25); }
 a, a:hover, a:visited, a:active { text-decoration: none; color: #E3E3E3; }
 ul { list-style: none; padding: 0; margin: 0; }
@@ -48,29 +48,32 @@ main a:active {
 h1 {
     font-family: Georgia, serif;
     margin: 0;
-    padding: 0;
     font-size: 34px;
     font-weight: 100;
     font-style: italic;
     color: #262626;
+    text-shadow: 0px 1px white;
 }
 
 p {
-    font-size: 14px;
-    text-align: justify;
-    line-height: 1.5em;
-    color: #333333;
+    font-size: 18px;
+    color: #444444;
+    text-shadow: 0px 1px white;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-style: italic;
 }
 
 #image {
-    background-color: lightblue;
+    background-image: url(../images/l1p1.png);
+    background-color: #D6D6D6;
     position: relative;
     width: 100px;
     height: 125px;
     margin: 0 25px 10px 0;
     border-radius: 2px;
     float: left;
-    box-shadow: 0px 1px 0px white;
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.07) inset, 0px 1px 0px 1px rgba(255,255,255,0.3) inset, 0px 1px 0px white;
     overflow: hidden;
 }
 
@@ -81,7 +84,8 @@ p {
     right: 0px;
     border-width: 0 16px 16px 0;
     border-style: solid;
-    border-color: #EDEDED #F7F7F7;
+    border-color: #E3E3E3 #F7F7F7;
+    box-shadow: -1px 1px 2px rgba(0,0,0,0.5);
 }
 
 /*  -+=+-  -+=+-  -+=+-  DROP DOWN  -+=+-  -+=+-  -+=+-  */
@@ -165,17 +169,16 @@ p {
 
 #docView {
     top: 75px;
-    padding: 25px 25px 20px 25px;
+    padding: 25px 25px 15px 25px;
     position: relative;
     left: 227px;
     width: calc(55%);
     max-width: 650px;
     min-width: 525px;
-    min-height: 400px;
     border-radius: 2px;
     opacity: 0;
     border: 1px solid #808080;
-    box-shadow: 15px 15px 4px #EDEDED;
+    box-shadow: 0px 0px 0px 1px rgba(255,255,255,0.4), 15px 15px 4px #EDEDED;
     background-color: #F7F7F7;
     z-index: 10;
     
@@ -184,7 +187,7 @@ p {
 /*  -+=+-  -+=+-  -+=+-  SIDEBAR STYLES  -+=+-  -+=+-  -+=+-  */
 
 header {
-    cursor: crosshair;
+    cursor: pointer;
     box-sizing: content-box;
     text-align: center;
     width: 220px;
@@ -296,7 +299,8 @@ section a {
     text-shadow: 0px 1px #0F0F0F;
 }
 
-section a:hover{
+section a:hover {
+    cursor: pointer;
     -moz-transition: background-color 0.2s, box-shadow 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s, top 0.16s 0.075s;
     -webkit-transition: background-color 0.2s, box-shadow 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s, top 0.16s 0.075s;
     -o-transition: background-color 0.2s, box-shadow 0.16s 0.075s, color 0.2s 0.1s, border-bottom 0.22s, border-top 0.22s, background-color 0.22s, top 0.16s 0.075s;

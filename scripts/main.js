@@ -81,7 +81,6 @@ $(document).ready(function() {
                 page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc3_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Niflheim Odins</h1>").append("<p>November 1st, 2013</p>");
                 $("#image").css("background-image", "url(../images/hc_l3p1.png)");
             }
-            else if ()
         }
     }
     

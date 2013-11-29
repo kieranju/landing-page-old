@@ -96,31 +96,27 @@ $(document).ready(function() {
             $("main").append("<hr id='lineGen_01' />");
             var lineGen_01 = $("#lineGen_01");
             lineGen_01.css("top", objLocation.toString() + "px");
-            lineGen_01.delay(200).animate({"width": "75px", "opacity": "1"}, 150, "easeInOutQuart", function() {
+            lineGen_01.delay(200).animate({"width": "75px", "opacity": "1"}, 125, "easeInOutQuart", function() {
                 $("main").append("<div id='lineGen_02'></div>");
                 var lineGen_02 = $("#lineGen_02");
                 lineGen_02.css({"top": (objLocation + 4).toString() + "px"});
-                lineGen_02.animate({"width": "9px", "height": "9px", "opacity": "1"}, 150, "easeInOutBack", function() {
+                lineGen_02.animate({"width": "10px", "height": "10px", "opacity": "1"}, 125, "easeInOutBack", function() {
                     $("main").append("<div id='lineGen_03'></div>");
                     var lineGen_03 = $("#lineGen_03");
                     lineGen_03.css({"height": (objLocation - 75).toString() + "px", "top": "80px"});
-                    lineGen_03.animate({"opacity": "1"}, 150, "easeInOutQuart", function() {
+                    lineGen_03.animate({"opacity": "1"}, 125, "easeInOutQuart", function() {
                         $("main").append("<div id='lineGen_04'></div>");
                         var lineGen_04 = $("#lineGen_04");
-                        lineGen_04.css({"top": "71px"});
-                        lineGen_04.animate({"width": "9px", "height": "9px", "opacity": "1"}, 150, "easeInOutBack", function() {
+                        lineGen_04.animate({"width": "10px", "height": "10px", "opacity": "1"}, 125, "easeInOutBack", function() {
                             $("main").append("<div id='lineGen_05'></div>");
                             var lineGen_05 = $("#lineGen_05");
-                            lineGen_05.css("top", "75px");
-                            lineGen_05.animate({"opacity": "1"}, 150, "easeInOutQuart", function() {
+                            lineGen_05.animate({"opacity": "1"}, 125, "easeInOutQuart", function() {
                                 $("main").append("<div id='lineGen_06'></div>");
                                 var lineGen_06 = $("#lineGen_06");
-                                lineGen_06.css({"top": "71px"});
-                                lineGen_06.animate({"width": "9px", "height": "9px", "opacity": "1"}, 150, "easeInOutBack", function() {
-                                    $("main").append("<div id='lineGen_07'></div>");
-                                    var lineGen_07 = $("#lineGen_07");
-                                    lineGen_07.css({"top": "75px"});
-                                    lineGen_07.animate({"height": "500px", "width": "600px", "opacity": "1"}, 250, "easeInOutCubic", function() {
+                                lineGen_06.animate({"width": "10px", "height": "10px", "opacity": "1"}, 125, "easeInOutBack", function() {
+                                    
+                                    var docView = $("#docView");
+                                    docView.animate({"opacity": "1"}, 225, "easeInOutCubic", function() {
                                         animSequence = false;
                                     });
                                 });
@@ -132,21 +128,73 @@ $(document).ready(function() {
         }
         else
         {
+            var lineGen_01 = $("#lineGen_01");
+            var lineGen_02 = $("#lineGen_02");
+            var lineGen_03 = $("#lineGen_03");
+            var lineGen_04 = $("#lineGen_04");
+            var lineGen_05 = $("#lineGen_05");
+            var lineGen_06 = $("#lineGen_06");
+            var docView = $("#docView");
+            
             if (shouldReset == true)
             {
-                var lineGen_01 = $("#lineGen_01");
-                lineGen_01.animate({"width": "0px", "opacity": "0.3"}, 150, "easeInOutQuart", function() {
-                    animSequence = false;
+                docView.animate({"opacity": "0"}, 150, "easeInOutQuart", function() {
+                    lineGen_06.animate({"opacity": "0"}, 50, "easeInBack", function() {
+                        lineGen_06.css({"width": "5px", "height": "5px"});
+                        lineGen_05.animate({"opacity": "0"}, 100, "easeInOutQuart", function() {
+                            lineGen_04.animate({"opacity": "0"}, 50, "easeInBack", function() {
+                                lineGen_04.css({"width": "5px", "height": "5px"});
+                                lineGen_03.animate({"opacity": "0"}, 100, "easeInOutQuart", function() {
+                                    lineGen_02.animate({"opacity": "0"}, 50, "easeInBack", function() {
+                                        lineGen_02.css({"width": "5px", "height": "5px"});
+                                        lineGen_01.animate({"width": "0px", "opacity": "0"}, 100, "easeInOutQuart", function() {
+                                            animSequence = false;
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
                 });
-                $("main").remove(lineGen_01);
+                $("main").remove(lineGen_01).remove(lineGen_02).remove(lineGen_03).remove(lineGen_04).remove(lineGen_05).remove(lineGen_06);
             }
             else
             {
-                var lineGen_01 = $("#lineGen_01");
-                lineGen_01.animate({"width": "0px", "opacity": "0.3"}, 150, "easeInOutQuart", function() {
-                    lineGen_01.css("top", objLocation.toString() + "px")
-                    lineGen_01.animate({"width": "75px", "opacity": "1"}, 300, "easeInOutQuart", function() {
-                        animSequence = false;
+                docView.animate({"opacity": "0"}, 150, "easeInOutQuart", function() {
+                    lineGen_06.animate({"opacity": "0"}, 50, "easeInBack", function() {
+                        lineGen_06.css({"width": "5px", "height": "5px"});
+                        lineGen_05.animate({"opacity": "0"}, 100, "easeInOutQuart", function() {
+                            lineGen_04.animate({"opacity": "0"}, 50, "easeInBack", function() {
+                                lineGen_04.css({"width": "5px", "height": "5px"});
+                                lineGen_03.animate({"opacity": "0"}, 100, "easeInOutQuart", function() {
+                                    lineGen_02.animate({"opacity": "0"}, 50, "easeInBack", function() {
+                                        lineGen_02.css({"width": "5px", "height": "5px"});
+                                        lineGen_01.animate({"width": "0px", "opacity": "0"}, 100, "easeInOutQuart", function() {
+                                            lineGen_01.css("top", objLocation.toString() + "px");
+                                            
+                                            lineGen_01.delay(200).animate({"width": "75px", "opacity": "1"}, 125, "easeInOutQuart", function() {
+                                                lineGen_02.css({"top": (objLocation + 4).toString() + "px"});
+                                                lineGen_02.animate({"width": "10px", "height": "10px", "opacity": "1"}, 125, "easeInOutBack", function() {
+                                                    lineGen_03.css({"height": (objLocation - 75).toString() + "px", "top": "80px"});
+                                                    lineGen_03.animate({"opacity": "1"}, 150, "easeInOutQuart", function() {
+                                                        lineGen_04.animate({"width": "10px", "height": "10px", "opacity": "1"}, 125, "easeInOutBack", function() {
+                                                            lineGen_05.animate({"opacity": "1"}, 150, "easeInOutQuart", function() {
+                                                                lineGen_06.animate({"width": "10px", "height": "10px", "opacity": "1"}, 125, "easeInOutBack", function() {
+                                                                    docView.animate({"opacity": "1"}, 225, "easeInOutCubic", function() {
+                                                                        animSequence = false;
+                                                                    });
+                                                                });
+                                                            });
+                                                        });
+                                                    });
+                                                });
+                                            });
+                                            
+                                        });
+                                    });
+                                });
+                            });
+                        });
                     });
                 });
             }

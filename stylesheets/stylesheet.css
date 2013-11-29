@@ -22,7 +22,7 @@ body { background-color: #F2F2F2; background-image: url(../images/main_bg.png); 
 section hr { border: 0; width: 190px; height: 2px; margin: 0 auto 25px; background: rgba(0,0,0,0.3); border-bottom: 1px solid rgba(255,255,255,0.25); }
 a, a:hover, a:visited, a:active { text-decoration: none; color: #E3E3E3; }
 ul { list-style: none; padding: 0; margin: 0; }
-main { left: 210px; position: relative; }
+main { position: relative; padding-right: 100px; }
 
 /*  -+=+-  -+=+-  -+=+-  CONTENT STYLES  -+=+-  -+=+-  -+=+-  */
 
@@ -65,7 +65,6 @@ p {
 }
 
 #image {
-    background-image: url(../images/l1p1.png);
     background-color: #D6D6D6;
     position: relative;
     width: 100px;
@@ -74,7 +73,6 @@ p {
     border-radius: 2px;
     float: left;
     box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.07) inset, 0px 1px 0px 1px rgba(255,255,255,0.3) inset, 0px 1px 0px white;
-    overflow: hidden;
 }
 
 #image:after {
@@ -85,7 +83,7 @@ p {
     border-width: 0 16px 16px 0;
     border-style: solid;
     border-color: #E3E3E3 #F7F7F7;
-    box-shadow: -1px 1px 2px rgba(0,0,0,0.5);
+    box-shadow: -2px 2px 2px rgba(0,0,0,0.4);
 }
 
 /*  -+=+-  -+=+-  -+=+-  DROP DOWN  -+=+-  -+=+-  -+=+-  */
@@ -99,7 +97,7 @@ p {
 /*  -+=+-  -+=+-  -+=+-  LINE GENERATION  -+=+-  -+=+-  -+=+-  */
 
 #lineGen_01 {
-    left: 0px;
+    left: 200px;
     position: absolute;
     height: 2px;
     border: 0;
@@ -110,7 +108,7 @@ p {
 
 #lineGen_02 {
     position: absolute;
-    left: 74px;
+    left: 274px;
     width: 5px;
     height: 5px;
     border-radius: 15px;
@@ -121,7 +119,7 @@ p {
 
 #lineGen_03 {
     position: absolute;
-    left: 78px;
+    left: 278px;
     width: 2px;
     opacity: 0;
     background: #808080;
@@ -132,7 +130,7 @@ p {
 #lineGen_04 {
     position: absolute;
     top: 71px;
-    left: 74px;
+    left: 274px;
     width: 5px;
     height: 5px;
     border-radius: 15px;
@@ -142,7 +140,7 @@ p {
 }
 
 #lineGen_05 {
-    left: 83px;
+    left: 283px;
     top: 75px;
     position: absolute;
     height: 2px;
@@ -155,7 +153,7 @@ p {
 
 #lineGen_06 {
     position: absolute;
-    left: 223px;
+    left: 432px;
     width: 5px;
     height: 5px;
     top: 71px;
@@ -171,10 +169,11 @@ p {
     top: 75px;
     padding: 25px 25px 15px 25px;
     position: relative;
-    left: 227px;
+    left: 436px;
     width: calc(55%);
     max-width: 650px;
     min-width: 525px;
+    height: 175px;
     border-radius: 2px;
     opacity: 0;
     border: 1px solid #808080;

@@ -55,6 +55,36 @@ $(document).ready(function() {
         }
     }
     
+    function contentGeneration(clicked, degenerate, generate) {
+        idButton = clicked.attr("id");
+        page = $("#docView");
+        
+        if (degenerate == true)
+        {
+            page.empty();
+        }
+        
+        if (generate == true)
+        {
+            if (idButton == "hc_l1p1")
+            {
+                page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc1_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Canada Website</h1>").append("<p>September 27th, 2013</p>");
+                $("#image").css("background-image", "url(../images/hc_l1p1.png)");
+            }
+            else if (idButton == "hc_l2p2")
+            {
+                page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc2_project_02/'>Visit the Project Page &rarr;</a>").append("<h1>Knee On Co.</h1>").append("<p>October 18th, 2013</p>");
+                $("#image").css("background-image", "url(../images/hc_l2p2.png)");
+            }
+            else if (idButton == "hc_l3p1")
+            {
+                page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc3_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Niflheim Odins</h1>").append("<p>November 1st, 2013</p>");
+                $("#image").css("background-image", "url(../images/hc_l3p1.png)");
+            }
+            else if ()
+        }
+    }
+    
     $("#sidebar").find("a").click(function() {
         if (animSequence == false)
         {
@@ -68,6 +98,7 @@ $(document).ready(function() {
                 branchSelected = true;
                 branchObj = activeObj;
                 pageRender(objLocation, true, false);
+                contentGeneration(activeObj, false, true, activeObj);
             }
             else
             {
@@ -76,46 +107,45 @@ $(document).ready(function() {
                     activeObj.toggleClass("selected");
                     delete branchObj;
                     branchSelected = false;
-                    pageRender(objLocation, false, true);
+                    pageRender(objLocation, false, true, activeObj);
                 }
                 else // Button is selected, different button gets pressed
                 {
                     branchObj.toggleClass("selected");
                     activeObj.toggleClass("selected");
                     branchObj = activeObj;
-                    pageRender(objLocation, false, false);
+                    pageRender(objLocation, false, false, activeObj);
                 }
             }
         }
     });
     
-    function pageRender(objLocation, newLine, shouldReset) {
+    function pageRender(objLocation, newLine, shouldReset, activeObj) {
+        var docView = $("#docView");
         
         if (newLine == true)
-        {
-            $("main").append("<hr id='lineGen_01' />");
+        {   
+            $("main").append("<hr id='lineGen_01' class='lineGen' />");
             var lineGen_01 = $("#lineGen_01");
             lineGen_01.css("top", objLocation.toString() + "px");
             lineGen_01.delay(200).animate({"width": "75px", "opacity": "1"}, 125, "easeInOutQuart", function() {
-                $("main").append("<div id='lineGen_02'></div>");
+                $("main").append("<div id='lineGen_02' class='lineGen'></div>");
                 var lineGen_02 = $("#lineGen_02");
                 lineGen_02.css({"top": (objLocation + 4).toString() + "px"});
                 lineGen_02.animate({"width": "10px", "height": "10px", "opacity": "1"}, 125, "easeInOutBack", function() {
-                    $("main").append("<div id='lineGen_03'></div>");
+                    $("main").append("<div id='lineGen_03' class='lineGen'></div>");
                     var lineGen_03 = $("#lineGen_03");
                     lineGen_03.css({"height": (objLocation - 75).toString() + "px", "top": "80px"});
                     lineGen_03.animate({"opacity": "1"}, 125, "easeInOutQuart", function() {
-                        $("main").append("<div id='lineGen_04'></div>");
+                        $("main").append("<div id='lineGen_04' class='lineGen'></div>");
                         var lineGen_04 = $("#lineGen_04");
                         lineGen_04.animate({"width": "10px", "height": "10px", "opacity": "1"}, 125, "easeInOutBack", function() {
-                            $("main").append("<div id='lineGen_05'></div>");
+                            $("main").append("<div id='lineGen_05' class='lineGen''></div>");
                             var lineGen_05 = $("#lineGen_05");
                             lineGen_05.animate({"opacity": "1"}, 125, "easeInOutQuart", function() {
-                                $("main").append("<div id='lineGen_06'></div>");
+                                $("main").append("<div id='lineGen_06' class='lineGen''></div>");
                                 var lineGen_06 = $("#lineGen_06");
                                 lineGen_06.animate({"width": "10px", "height": "10px", "opacity": "1"}, 125, "easeInOutBack", function() {
-                                    
-                                    var docView = $("#docView");
                                     docView.animate({"opacity": "1"}, 225, "easeInOutCubic", function() {
                                         animSequence = false;
                                     });
@@ -134,7 +164,6 @@ $(document).ready(function() {
             var lineGen_04 = $("#lineGen_04");
             var lineGen_05 = $("#lineGen_05");
             var lineGen_06 = $("#lineGen_06");
-            var docView = $("#docView");
             
             if (shouldReset == true)
             {
@@ -148,6 +177,8 @@ $(document).ready(function() {
                                     lineGen_02.animate({"opacity": "0"}, 50, "easeInBack", function() {
                                         lineGen_02.css({"width": "5px", "height": "5px"});
                                         lineGen_01.animate({"width": "0px", "opacity": "0"}, 100, "easeInOutQuart", function() {
+                                            $("main").remove(".lineGen");
+                                            contentGeneration(activeObj, true, false);
                                             animSequence = false;
                                         });
                                     });
@@ -156,7 +187,6 @@ $(document).ready(function() {
                         });
                     });
                 });
-                $("main").remove(lineGen_01).remove(lineGen_02).remove(lineGen_03).remove(lineGen_04).remove(lineGen_05).remove(lineGen_06);
             }
             else
             {
@@ -171,6 +201,7 @@ $(document).ready(function() {
                                         lineGen_02.css({"width": "5px", "height": "5px"});
                                         lineGen_01.animate({"width": "0px", "opacity": "0"}, 100, "easeInOutQuart", function() {
                                             lineGen_01.css("top", objLocation.toString() + "px");
+                                            contentGeneration(activeObj, true, true);
                                             
                                             lineGen_01.delay(200).animate({"width": "75px", "opacity": "1"}, 125, "easeInOutQuart", function() {
                                                 lineGen_02.css({"top": (objLocation + 4).toString() + "px"});

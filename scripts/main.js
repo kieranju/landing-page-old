@@ -68,17 +68,17 @@ $(document).ready(function() {
         {
             if (idButton == "hc_l1p1")
             {
-                page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc1_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Canada Website</h1>").append("<p>September 27th, 2013</p>");
+                page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc1_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Canada Website</h1>").append("<p>September 27th, 2013</p>").append("<div class='clearfix'></div>");
                 $("#image").css("background-image", "url(../images/hc_l1p1.png)");
             }
             else if (idButton == "hc_l2p2")
             {
-                page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc2_project_02/'>Visit the Project Page &rarr;</a>").append("<h1>Knee On Co.</h1>").append("<p>October 18th, 2013</p>");
+                page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc2_project_02/'>Visit the Project Page &rarr;</a>").append("<h1>Knee On Co.</h1>").append("<p>October 18th, 2013</p>").append("<div class='clearfix'></div>");
                 $("#image").css("background-image", "url(../images/hc_l2p2.png)");
             }
             else if (idButton == "hc_l3p1")
             {
-                page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc3_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Niflheim Odins</h1>").append("<p>November 1st, 2013</p>");
+                page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc3_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Niflheim Odins</h1>").append("<p>November 1st, 2013</p>").append("<div class='clearfix'></div>");
                 $("#image").css("background-image", "url(../images/hc_l3p1.png)");
             }
         }
@@ -89,31 +89,34 @@ $(document).ready(function() {
         {
             var activeObj = $(this);
             var objLocation = ((activeObj.position().top) + 205);
-            animSequence = true;
             
-            if (branchSelected == false) // Nothing is selected, button is pressed
+            if (!($(window).width() <= 550))
             {
-                activeObj.toggleClass("selected");
-                branchSelected = true;
-                branchObj = activeObj;
-                pageRender(objLocation, true, false);
-                contentGeneration(activeObj, false, true, activeObj);
-            }
-            else
-            {
-                if (activeObj.hasClass("selected")) // Button is selected, same button gets pressed
+                animSequence = true;
+                if (branchSelected == false) // Nothing is selected, button is pressed
                 {
                     activeObj.toggleClass("selected");
-                    delete branchObj;
-                    branchSelected = false;
-                    pageRender(objLocation, false, true, activeObj);
-                }
-                else // Button is selected, different button gets pressed
-                {
-                    branchObj.toggleClass("selected");
-                    activeObj.toggleClass("selected");
+                    branchSelected = true;
                     branchObj = activeObj;
-                    pageRender(objLocation, false, false, activeObj);
+                    pageRender(objLocation, true, false);
+                    contentGeneration(activeObj, false, true, activeObj);
+                }
+                else
+                {
+                    if (activeObj.hasClass("selected")) // Button is selected, same button gets pressed
+                    {
+                        activeObj.toggleClass("selected");
+                        delete branchObj;
+                        branchSelected = false;
+                        pageRender(objLocation, false, true, activeObj);
+                    }
+                    else // Button is selected, different button gets pressed
+                    {
+                        branchObj.toggleClass("selected");
+                        activeObj.toggleClass("selected");
+                        branchObj = activeObj;
+                        pageRender(objLocation, false, false, activeObj);
+                    }
                 }
             }
         }
@@ -121,9 +124,9 @@ $(document).ready(function() {
     
     function pageRender(objLocation, newLine, shouldReset, activeObj) {
         var docView = $("#docView");
-        
+    
         if (newLine == true)
-        {   
+        {
             $("main").append("<hr id='lineGen_01' class='lineGen' />");
             var lineGen_01 = $("#lineGen_01");
             lineGen_01.css("top", objLocation.toString() + "px");
@@ -139,10 +142,10 @@ $(document).ready(function() {
                         $("main").append("<div id='lineGen_04' class='lineGen'></div>");
                         var lineGen_04 = $("#lineGen_04");
                         lineGen_04.animate({"width": "10px", "height": "10px", "opacity": "1"}, 125, "easeInOutBack", function() {
-                            $("main").append("<div id='lineGen_05' class='lineGen''></div>");
+                            $("main").append("<div id='lineGen_05' class='lineGen'></div>");
                             var lineGen_05 = $("#lineGen_05");
                             lineGen_05.animate({"opacity": "1"}, 125, "easeInOutQuart", function() {
-                                $("main").append("<div id='lineGen_06' class='lineGen''></div>");
+                                $("main").append("<div id='lineGen_06' class='lineGen'></div>");
                                 var lineGen_06 = $("#lineGen_06");
                                 lineGen_06.animate({"width": "10px", "height": "10px", "opacity": "1"}, 125, "easeInOutBack", function() {
                                     docView.animate({"opacity": "1"}, 225, "easeInOutCubic", function() {

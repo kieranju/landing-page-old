@@ -18,11 +18,12 @@
 
 /*  -+=+-  -+=+-  -+=+-  MAIN STYLES  -+=+-  -+=+-  -+=+-  */
 
-body { background-color: #F2F2F2; background-image: url(../images/main_bg.png); margin: 0; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif; }
+html { height: 100%; overflow-x: hidden; overflow-y: hidden; }
+body { height: inherit; background-color: #F2F2F2; background-image: url(../images/main_bg.png); margin: 0; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif; }
 section hr { border: 0; width: 190px; height: 2px; margin: 0 auto 25px; background: rgba(0,0,0,0.3); border-bottom: 1px solid rgba(255,255,255,0.25); }
 a, a:hover, a:visited, a:active { text-decoration: none; color: #E3E3E3; }
 ul { list-style: none; padding: 0; margin: 0; }
-main { position: relative; padding-right: 100px; }
+main { height: inherit; }
 
 /*  -+=+-  -+=+-  -+=+-  CONTENT STYLES  -+=+-  -+=+-  -+=+-  */
 
@@ -69,7 +70,7 @@ p {
     position: relative;
     width: 100px;
     height: 125px;
-    margin: 0 25px 10px 0;
+    margin: 0 25px 0 0;
     border-radius: 2px;
     float: left;
     box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.07) inset, 0px 1px 0px 1px rgba(255,255,255,0.3) inset, 0px 1px 0px white;
@@ -140,6 +141,7 @@ p {
 }
 
 #lineGen_05 {
+    transition: width 0.3s 0.3s;
     left: 283px;
     top: 75px;
     position: absolute;
@@ -152,6 +154,7 @@ p {
 }
 
 #lineGen_06 {
+    transition: left 0.3s 0.3s, z-index 0.0s 0.3s;
     position: absolute;
     left: 432px;
     width: 5px;
@@ -165,23 +168,6 @@ p {
     
 }
 
-#docView {
-    top: 75px;
-    padding: 25px 25px 15px 25px;
-    position: relative;
-    left: 436px;
-    width: calc(55%);
-    max-width: 650px;
-    min-width: 525px;
-    height: 175px;
-    border-radius: 2px;
-    opacity: 0;
-    border: 1px solid #808080;
-    box-shadow: 0px 0px 0px 1px rgba(255,255,255,0.4), 15px 15px 4px #EDEDED;
-    background-color: #F7F7F7;
-    z-index: 10;
-    
-}
 
 /*  -+=+-  -+=+-  -+=+-  SIDEBAR STYLES  -+=+-  -+=+-  -+=+-  */
 

@@ -55,7 +55,7 @@ $(document).ready(function() {
         }
     }
     
-    function contentGeneration(clicked, degenerate, generate) {
+    function contentGeneration(clicked, degenerate, generate, mobile) { // ADDING LINKS MUST BE DONE HERE, AND IN THE HTML; MUST ADD CLICK EVENT AS WELL //
         idButton = clicked.attr("id");
         page = $("#docView");
         
@@ -68,18 +68,63 @@ $(document).ready(function() {
         {
             if (idButton == "hc_l1p1")
             {
-                page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc1_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Canada Website</h1>").append("<p>September 27th, 2013</p>").append("<div class='clearfix'></div>");
-                $("#image").css("background-image", "url(../images/hc_l1p1.png)");
+                if (mobile == true)
+                {
+                    window.location.href = "http://kutz.htpwebdesign.ca/projects/hc1_project_01/";
+                }
+                else
+                {
+                    page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc1_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Canada Website</h1>").append("<p>September 27th, 2013</p>").append("<div class='clearfix'></div>");
+                    $("#image").css("background-image", "url(../images/hc_l1p1.png)");
+                }
             }
             else if (idButton == "hc_l2p2")
             {
-                page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc2_project_02/'>Visit the Project Page &rarr;</a>").append("<h1>Knee On Co.</h1>").append("<p>October 18th, 2013</p>").append("<div class='clearfix'></div>");
-                $("#image").css("background-image", "url(../images/hc_l2p2.png)");
+                if (mobile == true)
+                {
+                    window.location.href = "http://kutz.htpwebdesign.ca/projects/hc2_project_02/";
+                }
+                else
+                {
+                    page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc2_project_02/'>Visit the Project Page &rarr;</a>").append("<h1>Knee On Co.</h1>").append("<p>October 18th, 2013</p>").append("<div class='clearfix'></div>");
+                    $("#image").css("background-image", "url(../images/hc_l2p2.png)");
+                }
             }
             else if (idButton == "hc_l3p1")
             {
-                page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc3_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Niflheim Odins</h1>").append("<p>November 1st, 2013</p>").append("<div class='clearfix'></div>");
-                $("#image").css("background-image", "url(../images/hc_l3p1.png)");
+                if (mobile == true)
+                {
+                    window.location.href = "http://kutz.htpwebdesign.ca/projects/hc3_project_01/";
+                }
+                else
+                {
+                    page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc3_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Niflheim Odins</h1>").append("<p>November 1st, 2013</p>").append("<div class='clearfix'></div>");
+                    $("#image").css("background-image", "url(../images/hc_l3p1.png)");
+                }
+            }
+            else if (idButton == "hc_l4p1")
+            {
+                if (mobile == true)
+                {
+                    window.location.href = "http://kutz.htpwebdesign.ca/projects/hc4_project_01/";
+                }
+                else
+                {
+                    page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc4_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Reineer Real Estate</h1>").append("<p>November 20th, 2013</p>").append("<div class='clearfix'></div>");
+                    $("#image").css("background-image", "url(../images/hc_l4p1.png)");
+                }
+            }
+            else if (idButton == "js_l1p1")
+            {
+                if (mobile == true)
+                {
+                    window.location.href = "http://kutz.htpwebdesign.ca/projects/j1_project_01/";
+                }
+                else
+                {
+                    page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/j1_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Tic Tac Toe</h1>").append("<p>November 12th, 2013</p>").append("<div class='clearfix'></div>");
+                    $("#image").css("background-image", "url(../images/js_l1p1.png)");
+                }
             }
         }
     }
@@ -93,24 +138,24 @@ $(document).ready(function() {
             if (!($(window).width() <= 550))
             {
                 animSequence = true;
-                if (branchSelected == false) // Nothing is selected, button is pressed
+                if (branchSelected == false) // nothing is selected, button is pressed
                 {
                     activeObj.toggleClass("selected");
                     branchSelected = true;
                     branchObj = activeObj;
                     pageRender(objLocation, true, false);
-                    contentGeneration(activeObj, false, true, activeObj);
+                    contentGeneration(activeObj, false, true, activeObj, false);
                 }
                 else
                 {
-                    if (activeObj.hasClass("selected")) // Button is selected, same button gets pressed
+                    if (activeObj.hasClass("selected")) // button is selected, same button gets pressed
                     {
                         activeObj.toggleClass("selected");
                         delete branchObj;
                         branchSelected = false;
                         pageRender(objLocation, false, true, activeObj);
                     }
-                    else // Button is selected, different button gets pressed
+                    else // button is selected, different button gets pressed
                     {
                         branchObj.toggleClass("selected");
                         activeObj.toggleClass("selected");
@@ -118,6 +163,10 @@ $(document).ready(function() {
                         pageRender(objLocation, false, false, activeObj);
                     }
                 }
+            }
+            else
+            {
+                contentGeneration(activeObj, false, true, true);
             }
         }
     });
@@ -180,7 +229,7 @@ $(document).ready(function() {
                                         lineGen_02.css({"width": "5px", "height": "5px"});
                                         lineGen_01.animate({"width": "0px", "opacity": "0"}, 100, "easeInOutQuart", function() {
                                             $("main").remove(".lineGen");
-                                            contentGeneration(activeObj, true, false);
+                                            contentGeneration(activeObj, true, false, false);
                                             animSequence = false;
                                         });
                                     });
@@ -203,7 +252,7 @@ $(document).ready(function() {
                                         lineGen_02.css({"width": "5px", "height": "5px"});
                                         lineGen_01.animate({"width": "0px", "opacity": "0"}, 100, "easeInOutQuart", function() {
                                             lineGen_01.css("top", objLocation.toString() + "px");
-                                            contentGeneration(activeObj, true, true);
+                                            contentGeneration(activeObj, true, true, false);
                                             
                                             lineGen_01.delay(200).animate({"width": "75px", "opacity": "1"}, 125, "easeInOutQuart", function() {
                                                 lineGen_02.css({"top": (objLocation + 4).toString() + "px"});

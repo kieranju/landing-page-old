@@ -77,3 +77,17 @@ header:hover #wings_hover {
     transition: 0.3s 0.07s;
     top: -2px;
 }
+
+@media (max-width: 650px) {
+    .gwd-page-content {
+        display: none;
+    }
+    
+    .gwd-page-container {
+        background-image: url(../images/logo.png);
+    }
+
+    header {
+        margin: 0 auto;
+    }
+}

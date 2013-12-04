@@ -129,6 +129,8 @@
 
 @media (max-width: 550px) {
     
+    html { height: auto; overflow-y: scroll; }
+    
     main {
         display: none;
     }

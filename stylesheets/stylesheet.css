@@ -18,7 +18,7 @@
 
 /*  -+=+-  -+=+-  -+=+-  MAIN STYLES  -+=+-  -+=+-  -+=+-  */
 
-html { height: 100%; overflow-x: hidden; overflow-y: hidden; }
+html { height: 100%; overflow-x: hidden; -webkit-overflow-scrolling: touch; }
 body { height: inherit; background-color: #F2F2F2; background-image: url(../images/main_bg.png); margin: 0; font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif; }
 section hr { border: 0; width: 190px; height: 2px; margin: 0 auto 25px; background: rgba(0,0,0,0.3); border-bottom: 1px solid rgba(255,255,255,0.25); }
 a, a:hover, a:visited, a:active { text-decoration: none; color: #E3E3E3; }

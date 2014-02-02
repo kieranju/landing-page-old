@@ -1,0 +1,11 @@
+100 oneshots of Drums etc.. sampled and/or created by Orkan Gazi.
+
+Format: *.wav, mono/stereo, 44100 Hz, 16 bit.
+
+Feel free to redistribute this package non-commercially, 
+but please leave the zip-file and its contents unchanged.
+
+E-mail: 0t0b0t@gmx.de
+
+
+(c)2006 OtoBot Records

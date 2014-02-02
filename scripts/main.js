@@ -126,6 +126,18 @@ $(document).ready(function() {
                     $("#image").css("background-image", "url(../images/js_l1p1.png)");
                 }
             }
+            else if (idButton == "js_l1p2")
+            {
+                if (mobile == true)
+                {
+                    window.location.href = "http://kutz.htpwebdesign.ca/projects/j1_project_02/";
+                }
+                else
+                {
+                    page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/j1_project_02/'>Visit the Project Page &rarr;</a>").append("<h1>JS/JQ Tutorials</h1>").append("<p>December 9th, 2013</p>").append("<div class='clearfix'></div>");
+                    $("#image").css("background-image", ""); //url(../images/js_l1p2.png)
+                }
+            }
         }
     }
     

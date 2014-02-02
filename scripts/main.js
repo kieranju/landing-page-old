@@ -70,7 +70,7 @@ $(document).ready(function() {
             {
                 if (mobile == true)
                 {
-                    window.location.href = "http://kutz.htpwebdesign.ca/projects/hc1_project_01/";
+                    window.location.href = "#";
                 }
                 else
                 {
@@ -82,7 +82,7 @@ $(document).ready(function() {
             {
                 if (mobile == true)
                 {
-                    window.location.href = "http://kutz.htpwebdesign.ca/projects/hc2_project_02/";
+                    window.location.href = "#";
                 }
                 else
                 {
@@ -94,7 +94,7 @@ $(document).ready(function() {
             {
                 if (mobile == true)
                 {
-                    window.location.href = "http://kutz.htpwebdesign.ca/projects/hc3_project_01/";
+                    window.location.href = "#";
                 }
                 else
                 {
@@ -106,7 +106,7 @@ $(document).ready(function() {
             {
                 if (mobile == true)
                 {
-                    window.location.href = "http://kutz.htpwebdesign.ca/projects/hc4_project_01/";
+                    window.location.href = "#";
                 }
                 else
                 {
@@ -118,7 +118,7 @@ $(document).ready(function() {
             {
                 if (mobile == true)
                 {
-                    window.location.href = "http://kutz.htpwebdesign.ca/projects/j1_project_01/";
+                    window.location.href = "#";
                 }
                 else
                 {
@@ -130,7 +130,7 @@ $(document).ready(function() {
             {
                 if (mobile == true)
                 {
-                    window.location.href = "http://kutz.htpwebdesign.ca/projects/j1_project_02/";
+                    window.location.href = "#";
                 }
                 else
                 {

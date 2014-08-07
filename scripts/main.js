@@ -55,7 +55,7 @@ $(document).ready(function() {
         }
     }
     
-    function contentGeneration(clicked, degenerate, generate, mobile) { // ADDING LINKS MUST BE DONE HERE, AND IN THE HTML; MUST ADD CLICK EVENT AS WELL //
+    function contentGeneration(clicked, degenerate, generate, mobile) { // ADDING LINKS MUST BE DONE HERE, AND IN THE HTML; MUST ADD CLICK EVENT AS WELL
         idButton = clicked.attr("id");
         page = $("#docView");
         
@@ -70,23 +70,23 @@ $(document).ready(function() {
             {
                 if (mobile == true)
                 {
-                    window.location.href = "http://kutz.htpwebdesign.ca/projects/hc1_project_01/";
+                    window.location.href = "#";
                 }
                 else
                 {
-                    page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc1_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Canada Website</h1>").append("<p>September 27th, 2013</p>").append("<div class='clearfix'></div>");
-                    $("#image").css("background-image", "url(../images/hc_l1p1.png)");
+                    page.append("<div id='image'></div>").append("<a href='#'>Visit the Project Page &rarr;</a>").append("<h1>Example Project</h1>").append("<p>January 1st, 2014</p>").append("<div class='clearfix'></div>");
+                    $("#image").css("background-image", "");
                 }
             }
             else if (idButton == "hc_l2p2")
             {
                 if (mobile == true)
                 {
-                    window.location.href = "http://kutz.htpwebdesign.ca/projects/hc2_project_02/";
+                    window.location.href = "#";
                 }
                 else
                 {
-                    page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc2_project_02/'>Visit the Project Page &rarr;</a>").append("<h1>Knee On Co.</h1>").append("<p>October 18th, 2013</p>").append("<div class='clearfix'></div>");
+                    page.append("<div id='image'></div>").append("<a href='#'>Visit the Project Page &rarr;</a>").append("<h1>Example Project</h1>").append("<p>January 1st, 2014</p>").append("<div class='clearfix'></div>");
                     $("#image").css("background-image", "url(../images/hc_l2p2.png)");
                 }
             }
@@ -94,36 +94,48 @@ $(document).ready(function() {
             {
                 if (mobile == true)
                 {
-                    window.location.href = "http://kutz.htpwebdesign.ca/projects/hc3_project_01/";
+                    window.location.href = "#";
                 }
                 else
                 {
-                    page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc3_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Niflheim Odins</h1>").append("<p>November 1st, 2013</p>").append("<div class='clearfix'></div>");
-                    $("#image").css("background-image", "url(../images/hc_l3p1.png)");
+                    page.append("<div id='image'></div>").append("<a href='#'>Visit the Project Page &rarr;</a>").append("<h1>Example Project</h1>").append("<p>January 1st, 2014</p>").append("<div class='clearfix'></div>");
+                    $("#image").css("background-image", "");
                 }
             }
             else if (idButton == "hc_l4p1")
             {
                 if (mobile == true)
                 {
-                    window.location.href = "http://kutz.htpwebdesign.ca/projects/hc4_project_01/";
+                    window.location.href = "#";
                 }
                 else
                 {
-                    page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/hc4_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Reineer Real Estate</h1>").append("<p>November 20th, 2013</p>").append("<div class='clearfix'></div>");
-                    $("#image").css("background-image", "url(../images/hc_l4p1.png)");
+                    page.append("<div id='image'></div>").append("<a href='#'>Visit the Project Page &rarr;</a>").append("<h1>Example Project</h1>").append("<p>January 1st, 2014</p>").append("<div class='clearfix'></div>");
+                    $("#image").css("background-image", "");
                 }
             }
             else if (idButton == "js_l1p1")
             {
                 if (mobile == true)
                 {
-                    window.location.href = "http://kutz.htpwebdesign.ca/projects/j1_project_01/";
+                    window.location.href = "#";
                 }
                 else
                 {
-                    page.append("<div id='image'></div>").append("<a href='http://kutz.htpwebdesign.ca/projects/j1_project_01/'>Visit the Project Page &rarr;</a>").append("<h1>Tic Tac Toe</h1>").append("<p>November 12th, 2013</p>").append("<div class='clearfix'></div>");
-                    $("#image").css("background-image", "url(../images/js_l1p1.png)");
+                    page.append("<div id='image'></div>").append("<a href='#'>Visit the Project Page &rarr;</a>").append("<h1>Example Project</h1>").append("<p>January 1st, 2014</p>").append("<div class='clearfix'></div>");
+                    $("#image").css("background-image", "");
+                }
+            }
+            else if (idButton == "js_l1p2")
+            {
+                if (mobile == true)
+                {
+                    window.location.href = "#";
+                }
+                else
+                {
+                    page.append("<div id='image'></div>").append("<a href='#'>Visit the Project Page &rarr;</a>").append("<h1>Example Project</h1>").append("<p>January 1st, 2014</p>").append("<div class='clearfix'></div>");
+                    $("#image").css("background-image", "");
                 }
             }
         }
